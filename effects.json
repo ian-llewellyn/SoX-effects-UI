@@ -96,6 +96,55 @@ parameter = {"title", "help", "type", "mandatory", "requires", "default", "value
                     "value": 0.2
                 }
             }
+        },
+        {
+            "title": "earwax",
+            "description": "Makes  audio  easier  to listen to on headphones.",
+            "parameters": []
+        },
+        {
+            "title": "fade",
+            "description": "Apply a fade effect to the beginning, end, or both of the audio.",
+            "parameters": [
+                {
+                    "title": "type",
+                    "help": "Select the shape of the fade curve: q for quarter of a sine wave, h for half a sine wave, t for linear (`triangular') slope, l for logarithmic, and p for inverted parabola.",
+                    "type": "char",
+                    "mandatory": false,
+                    "default": "l",
+                    "value": "l"
+                },
+                {
+                    "title": "fade-in-length",
+                    "help": "Specify 0 if no fade-in is wanted.",
+                    "type": "float",
+                    "mandatory": true,
+                    "default": 1,
+                    "value": 1
+                },
+                {
+                    "title": "stop-time",
+                    "help": "",
+                    "type": "float",
+                    "mandatory": false,
+                    "default": 0,
+                    "value": 0
+                },
+                {
+                    "title": "fade-out-length",
+                    "help": "",
+                    "type": "float",
+                    "mandatory": false,
+                    "requires": "stop-time",
+                    "default": "3",
+                    "value": "3"
+                }
+            ]
+        },
+        {
+            "title": "oops",
+            "description": "Mixes stereo to twin-mono where each mono channel contains the difference between the left and right stereo channels.",
+            "parameters": []
         }
     ]
 }
