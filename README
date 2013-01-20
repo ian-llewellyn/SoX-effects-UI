@@ -1,0 +1,12 @@
+Files:
+ui.html
+    Contains the layout for the UI page and links JavaScript logic to load and
+    calculate the effect chain expression to be passed in via command line (or
+    file) to the SoX programme.
+
+ui.js
+    Contains the JavaScript that does the calculations from variables listed on
+    the ui.html page.
+
+effects.json
+    A JSON representation of the available effects and their parameters.
