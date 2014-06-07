@@ -58,16 +58,16 @@ parameter = {"title", "help", "type", "mandatory", "requires", "default", "value
                     "help": "",
                     "type": "float",
                     "mandatory": true,
-                    "default": -70,
-                    "value": -70
+                    "default": -60,
+                    "value": -60
                 },
                 {
                     "title": "out-dB2",
                     "help": "",
                     "type": "float",
-                    "mandatory": false,
-                    "default": -70,
-                    "value": -70
+                    "mandatory": true,
+                    "default": -20,
+                    "value": -20
                 },
                 {
                     "title": "gain",
