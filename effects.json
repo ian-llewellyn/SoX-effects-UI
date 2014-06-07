@@ -54,7 +54,7 @@ parameter = {"title", "help", "type", "mandatory", "requires", "default", "value
                     "value": -70
                 },
                 {
-                    "title": "in-dB1",
+                    "title": "in-dB2",
                     "help": "",
                     "type": "float",
                     "mandatory": true,
@@ -62,7 +62,7 @@ parameter = {"title", "help", "type", "mandatory", "requires", "default", "value
                     "value": -70
                 },
                 {
-                    "title": "out-dB1",
+                    "title": "out-dB2",
                     "help": "",
                     "type": "float",
                     "mandatory": false,
