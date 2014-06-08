@@ -131,5 +131,50 @@
         "title": "oops",
         "description": "Mixes stereo to twin-mono where each mono channel contains the difference between the left and right stereo channels.",
         "parameters": []
+    },
+    {
+        "title": "equalizer",
+        "description": "Apply a two-pole peaking equalisation (EQ) filter. With this filter, the signal-level at and around a selected frequency can be increased or decreased, whilst (unlike band-pass and band-reject filters) that at all other frequencies is unchanged.",
+        "parameters": [
+            {
+                "title": "frequency",
+                "help": "The filter's central frequency in Hz. 'k' may be suffixed for kHz.",
+                "mandatory": true,
+                "type": "string"
+            },
+            {
+                "title": "width",
+                "help": "The bandwidth of the filter.",
+                "mandatory": true,
+                "type": "string"
+            },
+            {
+                "title": "gain",
+                "help": "The required gain or attenuation in dB.",
+                "mandatory": true,
+                "type": "integer"
+            }
+        ]
+    },
+    {
+        "title": "remix",
+        "description": "Select and mix input audio channels into output audio channels. Each output channel is specified, in turn, by a given out-spec: a list of contributing input channels and volume specifications.",
+        "parameters": [
+            {
+                "title": "switch",
+                "help": "-a | -m | -p",
+                "manadatory": false,
+                "default": "",
+                "type": "string"
+            },
+            {
+                "title": "out-spec",
+                "help": "List of input channel number to include in this output channel or 0 for a silent channel. A volume spec can be appended using p, i or v as appropriate. Example: 1p-3,2i-3",
+                "mandatory": true,
+                "repeat": "+",
+                "default": "1,2i",
+                "type": "string"
+            }
+        ]
     }
 ]
