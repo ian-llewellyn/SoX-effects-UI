@@ -5,20 +5,26 @@
             "description": "Compand (compress or expand) the dynamic range of the audio.",
             "parameters": [
                 {
-                    "title": "attack1",
-                    "help": "The attack and decay parameters (in seconds) determinethe time over which the instantaneous level of the input signal is averaged to determine its volume; attacks refer to increases in volume and decays refer to decreases.",
-                    "type": "float",
-                    "mandatory": true,
-                    "default": 0.3,
-                    "value": 0.3
-                },
-                {
-                    "title": "decay1",
-                    "help": "The attack and decay parameters (in seconds) determinethe time over which the instantaneous level of the input signal is averaged to determine its volume; attacks refer to increases in volume and decays refer to decreases.",
-                    "type": "float",
-                    "mandatory": true,
-                    "default": 0.8,
-                    "value": 0.8
+                    "group": true,
+                    "repeat": "+",
+                    "parameters": [
+                        {
+                            "title": "attack",
+                            "help": "The attack and decay parameters (in seconds) determinethe time over which the instantaneous level of the input signal is averaged to determine its volume; attacks refer to increases in volume and decays refer to decreases.",
+                            "type": "float",
+                            "mandatory": true,
+                            "default": 0.3,
+                            "value": 0.3
+                        },
+                        {
+                            "title": "decay",
+                            "help": "The attack and decay parameters (in seconds) determinethe time over which the instantaneous level of the input signal is averaged to determine its volume; attacks refer to increases in volume and decays refer to decreases.",
+                            "type": "float",
+                            "mandatory": true,
+                            "default": 0.8,
+                            "value": 0.8
+                        }
+                    ]
                 },
                 {
                     "title": "soft-knee-dB",
@@ -29,36 +35,26 @@
                     "value": 6
                 },
                 {
-                    "title": "in-dB1",
-                    "help": "",
-                    "type": "float",
-                    "mandatory": true,
-                    "default": -70,
-                    "value": -70
-                },
-                {
-                    "title": "out-dB1",
-                    "help": "",
-                    "type": "float",
-                    "mandatory": false,
-                    "default": -70,
-                    "value": -70
-                },
-                {
-                    "title": "in-dB2",
-                    "help": "",
-                    "type": "float",
-                    "mandatory": true,
-                    "default": -60,
-                    "value": -60
-                },
-                {
-                    "title": "out-dB2",
-                    "help": "",
-                    "type": "float",
-                    "mandatory": true,
-                    "default": -20,
-                    "value": -20
+                    "group": true,
+                    "repeat": "2+",
+                    "parameters": [
+                        {
+                            "title": "in-dB",
+                            "help": "",
+                            "type": "float",
+                            "mandatory": true,
+                            "default": -60,
+                            "value": -60
+                        },
+                        {
+                            "title": "out-dB",
+                            "help": "",
+                            "type": "float",
+                            "mandatory": true,
+                            "default": -20,
+                            "value": -20
+                        }
+                    ]
                 },
                 {
                     "title": "gain",
@@ -90,7 +86,7 @@
         },
         {
             "title": "earwax",
-            "description": "Makes  audio  easier  to listen to on headphones.",
+            "description": "Makes audio easier to listen to on headphones. Adds cues to 44.1kHz stereo (i.e. audio CD format) audio so that when listened to on headphones the stereo image is moved from inside your head (standard for headphones) to outside and in front of the listener (standard for speakers).",
             "parameters": []
         },
         {
