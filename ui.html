@@ -4,6 +4,17 @@
 <title>SoX Effects Chain UI</title>
 <script type="text/javascript" src="ui.js"></script>
 <script type="text/javascript">
+function expand_parameter(parameter) {
+  if ( parameter.hasOwnProperty('group') && parameter.group == true ) {
+    document.write( '<div style="border: solid gray 1px; margin: 5px 0; padding: 5px">' )
+    parameter.parameters.forEach(expand_parameter)
+    document.write( '</div>' )
+  } else {
+    document.write( '<input type="text" placeholder="' + parameter.title +
+      '" title="' + parameter.help + '"/>' )
+  }
+}
+
 xhr = new XMLHttpRequest()
 xhr.open('GET', 'effects.json', true)
 function ol(e) {
@@ -12,10 +23,7 @@ function ol(e) {
     efx_j.effects.forEach( function(effect) {
       document.write( '<h2>' + effect.title + '</h2>' )
       document.write( '<p>' + effect.description + '</p>' )
-      effect.parameters.forEach( function(parameter) {
-        document.write( '<input type="text" placeholder="' + parameter.title +
-          '" title="' + parameter.help + '"/>' )
-      } )
+      effect.parameters.forEach( expand_parameter )
     } )
   }
 }
