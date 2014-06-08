@@ -19,8 +19,8 @@ xhr = new XMLHttpRequest()
 xhr.open('GET', 'effects.json', true)
 function ol(e) {
   if ( this.status == 200 ) {
-    efx_j = JSON.parse( this.responseText )
-    efx_j.effects.forEach( function(effect) {
+    effects = JSON.parse( this.responseText )
+    effects.forEach( function(effect) {
       document.write( '<h2>' + effect.title + '</h2>' )
       document.write( '<p>' + effect.description + '</p>' )
       effect.parameters.forEach( expand_parameter )

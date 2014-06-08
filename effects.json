@@ -1,5 +1,4 @@
-{
-    "effects": [
+    [
         {
             "title": "compand",
             "description": "Compand (compress or expand) the dynamic range of the audio.",
@@ -134,4 +133,3 @@
             "parameters": []
         }
     ]
-}
