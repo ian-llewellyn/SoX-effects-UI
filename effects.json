@@ -1,135 +1,135 @@
-    [
-        {
-            "title": "compand",
-            "description": "Compand (compress or expand) the dynamic range of the audio.",
-            "parameters": [
-                {
-                    "group": true,
-                    "repeat": "+",
-                    "parameters": [
-                        {
-                            "title": "attack",
-                            "help": "The attack and decay parameters (in seconds) determinethe time over which the instantaneous level of the input signal is averaged to determine its volume; attacks refer to increases in volume and decays refer to decreases.",
-                            "type": "float",
-                            "mandatory": true,
-                            "default": 0.3,
-                            "value": 0.3
-                        },
-                        {
-                            "title": "decay",
-                            "help": "The attack and decay parameters (in seconds) determinethe time over which the instantaneous level of the input signal is averaged to determine its volume; attacks refer to increases in volume and decays refer to decreases.",
-                            "type": "float",
-                            "mandatory": true,
-                            "default": 0.8,
-                            "value": 0.8
-                        }
-                    ]
-                },
-                {
-                    "title": "soft-knee-dB",
-                    "help": "the points at where adjacent line segments on the transfer function meet will be rounded by the amount given.",
-                    "type": "float",
-                    "mandatory": false,
-                    "default": 6,
-                    "value": 6
-                },
-                {
-                    "group": true,
-                    "repeat": "2+",
-                    "parameters": [
-                        {
-                            "title": "in-dB",
-                            "help": "",
-                            "type": "float",
-                            "mandatory": true,
-                            "default": -60,
-                            "value": -60
-                        },
-                        {
-                            "title": "out-dB",
-                            "help": "",
-                            "type": "float",
-                            "mandatory": true,
-                            "default": -20,
-                            "value": -20
-                        }
-                    ]
-                },
-                {
-                    "title": "gain",
-                    "help": "",
-                    "type": "float",
-                    "mandatory": false,
-                    "default": 0,
-                    "value": 0
-                },
-                {
-                    "title": "initial-volume-dB",
-                    "help": "",
-                    "type": "float",
-                    "mandatory": false,
-                    "requires": "gain",
-                    "default": -90,
-                    "value": -90
-                },
-                {
-                    "title": "delay",
-                    "help": "",
-                    "type": "float",
-                    "mandatory": false,
-                    "requires": "initial-volume-dB",
-                    "default": 0.2,
-                    "value": 0.2
-                }
-            ]
-        },
-        {
-            "title": "earwax",
-            "description": "Makes audio easier to listen to on headphones. Adds cues to 44.1kHz stereo (i.e. audio CD format) audio so that when listened to on headphones the stereo image is moved from inside your head (standard for headphones) to outside and in front of the listener (standard for speakers).",
-            "parameters": []
-        },
-        {
-            "title": "fade",
-            "description": "Apply a fade effect to the beginning, end, or both of the audio.",
-            "parameters": [
-                {
-                    "title": "type",
-                    "help": "Select the shape of the fade curve: q for quarter of a sine wave, h for half a sine wave, t for linear (`triangular') slope, l for logarithmic, and p for inverted parabola.",
-                    "type": "char",
-                    "mandatory": false,
-                    "default": "l",
-                    "value": "l"
-                },
-                {
-                    "title": "fade-in-length",
-                    "help": "Specify 0 if no fade-in is wanted.",
-                    "type": "float",
-                    "mandatory": true,
-                    "default": 1,
-                    "value": 1
-                },
-                {
-                    "title": "stop-time",
-                    "help": "",
-                    "type": "float",
-                    "mandatory": false,
-                    "default": 0,
-                    "value": 0
-                },
-                {
-                    "title": "fade-out-length",
-                    "help": "",
-                    "type": "float",
-                    "mandatory": false,
-                    "requires": "stop-time",
-                    "default": "3",
-                    "value": "3"
-                }
-            ]
-        },
-        {
-            "title": "oops",
-            "description": "Mixes stereo to twin-mono where each mono channel contains the difference between the left and right stereo channels.",
-            "parameters": []
-        }
-    ]
+[
+    {
+        "title": "compand",
+        "description": "Compand (compress or expand) the dynamic range of the audio.",
+        "parameters": [
+            {
+                "group": true,
+                "repeat": "+",
+                "parameters": [
+                    {
+                        "title": "attack",
+                        "help": "The attack and decay parameters (in seconds) determinethe time over which the instantaneous level of the input signal is averaged to determine its volume; attacks refer to increases in volume and decays refer to decreases.",
+                        "type": "float",
+                        "mandatory": true,
+                        "default": 0.3,
+                        "value": 0.3
+                    },
+                    {
+                        "title": "decay",
+                        "help": "The attack and decay parameters (in seconds) determinethe time over which the instantaneous level of the input signal is averaged to determine its volume; attacks refer to increases in volume and decays refer to decreases.",
+                        "type": "float",
+                        "mandatory": true,
+                        "default": 0.8,
+                        "value": 0.8
+                    }
+                ]
+            },
+            {
+                "title": "soft-knee-dB",
+                "help": "the points at where adjacent line segments on the transfer function meet will be rounded by the amount given.",
+                "type": "float",
+                "mandatory": false,
+                "default": 6,
+                "value": 6
+            },
+            {
+                "group": true,
+                "repeat": "2+",
+                "parameters": [
+                    {
+                        "title": "in-dB",
+                        "help": "",
+                        "type": "float",
+                        "mandatory": true,
+                        "default": -60,
+                        "value": -60
+                    },
+                    {
+                        "title": "out-dB",
+                        "help": "",
+                        "type": "float",
+                        "mandatory": true,
+                        "default": -20,
+                        "value": -20
+                    }
+                ]
+            },
+            {
+                "title": "gain",
+                "help": "",
+                "type": "float",
+                "mandatory": false,
+                "default": 0,
+                "value": 0
+            },
+            {
+                "title": "initial-volume-dB",
+                "help": "",
+                "type": "float",
+                "mandatory": false,
+                "requires": "gain",
+                "default": -90,
+                "value": -90
+            },
+            {
+                "title": "delay",
+                "help": "",
+                "type": "float",
+                "mandatory": false,
+                "requires": "initial-volume-dB",
+                "default": 0.2,
+                "value": 0.2
+            }
+        ]
+    },
+    {
+        "title": "earwax",
+        "description": "Makes audio easier to listen to on headphones. Adds cues to 44.1kHz stereo (i.e. audio CD format) audio so that when listened to on headphones the stereo image is moved from inside your head (standard for headphones) to outside and in front of the listener (standard for speakers).",
+        "parameters": []
+    },
+    {
+        "title": "fade",
+        "description": "Apply a fade effect to the beginning, end, or both of the audio.",
+        "parameters": [
+            {
+                "title": "type",
+                "help": "Select the shape of the fade curve: q for quarter of a sine wave, h for half a sine wave, t for linear (`triangular') slope, l for logarithmic, and p for inverted parabola.",
+                "type": "char",
+                "mandatory": false,
+                "default": "l",
+                "value": "l"
+            },
+            {
+                "title": "fade-in-length",
+                "help": "Specify 0 if no fade-in is wanted.",
+                "type": "float",
+                "mandatory": true,
+                "default": 1,
+                "value": 1
+            },
+            {
+                "title": "stop-time",
+                "help": "",
+                "type": "float",
+                "mandatory": false,
+                "default": 0,
+                "value": 0
+            },
+            {
+                "title": "fade-out-length",
+                "help": "",
+                "type": "float",
+                "mandatory": false,
+                "requires": "stop-time",
+                "default": "3",
+                "value": "3"
+            }
+        ]
+    },
+    {
+        "title": "oops",
+        "description": "Mixes stereo to twin-mono where each mono channel contains the difference between the left and right stereo channels.",
+        "parameters": []
+    }
+]
