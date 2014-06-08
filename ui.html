@@ -11,7 +11,9 @@ function expand_parameter(parameter) {
     document.write( '</div>' )
   } else {
     document.write( '<input type="text" placeholder="' + parameter.title +
-      '" title="' + parameter.help + '"/>' )
+      '" title="' + parameter.help + '"' +
+      ( parameter.mandatory ? ' style="border-color: #faa"' : '' ) +
+      '/>' )
   }
 }
 
