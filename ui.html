@@ -2,8 +2,28 @@
 <html>
 <head>
 <title>SoX Effects Chain UI</title>
+<script type="text/javascript" src="ui.js"></script>
+<script type="text/javascript">
+xhr = new XMLHttpRequest()
+xhr.open('GET', 'effects.json', true)
+function ol(e) {
+  if ( this.status == 200 ) {
+    efx_j = JSON.parse( this.responseText )
+    efx_j.effects.forEach( function(effect) {
+      document.write( '<h2>' + effect.title + '</h2>' )
+      document.write( '<p>' + effect.description + '</p>' )
+      effect.parameters.forEach( function(parameter) {
+        document.write( '<input type="text" placeholder="' + parameter.title +
+          '" title="' + parameter.help + '"/>' )
+      } )
+    } )
+  }
+}
+xhr.onload = ol
+xhr.send()
+</script>
 </head>
 <body>
-
+<pre id="box"></pre>
 </body>
 </html>
