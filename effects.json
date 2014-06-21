@@ -30,6 +30,7 @@
                 "help": "the points at where adjacent line segments on the transfer function meet will be rounded by the amount given.",
                 "type": "float",
                 "mandatory": false,
+                "suffix": ":",
                 "default": 6,
                 "value": 6
             },
@@ -218,6 +219,7 @@
                                 "help": "the points at where adjacent line segments on the transfer function meet will be rounded by the amount given.",
                                 "type": "float",
                                 "mandatory": false,
+                                "suffix": ":",
                                 "default": 6,
                                 "value": 6
                             },
@@ -302,6 +304,7 @@
                         "help": "the points at where adjacent line segments on the transfer function meet will be rounded by the amount given.",
                         "type": "float",
                         "mandatory": false,
+                        "suffix": ":",
                         "default": 6,
                         "value": 6
                     },
