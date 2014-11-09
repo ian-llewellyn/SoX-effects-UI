@@ -9,7 +9,7 @@
                 "parameters": [
                     {
                         "title": "attack",
-                        "help": "The attack and decay parameters (in seconds) determinethe time over which the instantaneous level of the input signal is averaged to determine its volume; attacks refer to increases in volume and decays refer to decreases.",
+                        "help": "The attack and decay parameters (in seconds) determine the time over which the instantaneous level of the input signal is averaged to determine its volume; attacks refer to increases in volume and decays refer to decreases.",
                         "type": "float",
                         "mandatory": true,
                         "default": 0.3,
@@ -17,7 +17,7 @@
                     },
                     {
                         "title": "decay",
-                        "help": "The attack and decay parameters (in seconds) determinethe time over which the instantaneous level of the input signal is averaged to determine its volume; attacks refer to increases in volume and decays refer to decreases.",
+                        "help": "The attack and decay parameters (in seconds) determine the time over which the instantaneous level of the input signal is averaged to determine its volume; attacks refer to increases in volume and decays refer to decreases.",
                         "type": "float",
                         "mandatory": true,
                         "default": 0.8,
@@ -198,7 +198,7 @@
                                 "parameters": [
                                     {
                                         "title": "attack",
-                                        "help": "The attack and decay parameters (in seconds) determinethe time over which the instantaneous level of the input signal is averaged to determine its volume; attacks refer to increases in volume and decays refer to decreases.",
+                                        "help": "The attack and decay parameters (in seconds) determine the time over which the instantaneous level of the input signal is averaged to determine its volume; attacks refer to increases in volume and decays refer to decreases.",
                                         "type": "float",
                                         "mandatory": true,
                                         "default": 0.3,
@@ -206,7 +206,7 @@
                                     },
                                     {
                                         "title": "decay",
-                                        "help": "The attack and decay parameters (in seconds) determinethe time over which the instantaneous level of the input signal is averaged to determine its volume; attacks refer to increases in volume and decays refer to decreases.",
+                                        "help": "The attack and decay parameters (in seconds) determine the time over which the instantaneous level of the input signal is averaged to determine its volume; attacks refer to increases in volume and decays refer to decreases.",
                                         "type": "float",
                                         "mandatory": true,
                                         "default": 0.8,
@@ -283,7 +283,7 @@
                         "parameters": [
                             {
                                 "title": "attack",
-                                "help": "The attack and decay parameters (in seconds) determinethe time over which the instantaneous level of the input signal is averaged to determine its volume; attacks refer to increases in volume and decays refer to decreases.",
+                                "help": "The attack and decay parameters (in seconds) determine the time over which the instantaneous level of the input signal is averaged to determine its volume; attacks refer to increases in volume and decays refer to decreases.",
                                 "type": "float",
                                 "mandatory": true,
                                 "default": 0.3,
@@ -291,7 +291,7 @@
                             },
                             {
                                 "title": "decay",
-                                "help": "The attack and decay parameters (in seconds) determinethe time over which the instantaneous level of the input signal is averaged to determine its volume; attacks refer to increases in volume and decays refer to decreases.",
+                                "help": "The attack and decay parameters (in seconds) determine the time over which the instantaneous level of the input signal is averaged to determine its volume; attacks refer to increases in volume and decays refer to decreases.",
                                 "type": "float",
                                 "mandatory": true,
                                 "default": 0.8,
